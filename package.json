@@ -7,21 +7,24 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepublishOnly" : "npm test && npm run lint",
-    "prepare" : "npm run build",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ssac/react-native-auth0-plus.git"
   },
-  "keywords": ["react-native-auth0", "auth0"],
+  "keywords": [
+    "react-native-auth0",
+    "auth0"
+  ],
   "author": "ssac",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ssac/react-native-auth0-plus/issues"
   },
@@ -37,5 +40,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
