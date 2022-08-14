@@ -1,4 +1,4 @@
-var axios = require('axios').default;
+import axios from 'axios';
 
 import { AuthenticatorType, OobChannel } from '../enums/auth0';
 
@@ -209,7 +209,7 @@ export default class {
       },
     };
 
-    return axios.request(options).then(function (response: GeneralResp<AssociateRespData>) {
+    return axios.request(options).then((response: GeneralResp<AssociateRespData>) => {
       return response.data;
     });
   }
